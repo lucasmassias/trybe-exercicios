@@ -115,4 +115,4 @@ switch (statePerson) {
         console.log('reprovada');
         break
     default:
-        console.log('não se aplica');
+        console.log('não se aplica')};
