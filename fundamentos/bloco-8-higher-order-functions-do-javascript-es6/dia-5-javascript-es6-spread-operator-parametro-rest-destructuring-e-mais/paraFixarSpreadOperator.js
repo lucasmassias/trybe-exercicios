@@ -10,7 +10,7 @@ const additionalItens = ['leite condensado', 'leite em pó', 'sucrilhos'];
 
 const fruitSalad = (...fruit, ...additional) => {
   // Esreva sua função aqui
-  const getSalad =  ({ ...fruit ...additional });
+  const getSalad =  ({ ...fruit, ...additional });
   return getSalad;
 };
 
