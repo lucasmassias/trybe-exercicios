@@ -8,10 +8,10 @@ const specialFruit = ['morango', 'manga', 'laranja'];
 // Faça uma lista de complementos que você gostaria de adicionar
 const additionalItens = ['leite condensado', 'leite em pó', 'sucrilhos'];
 
-const fruitSalad = (...fruit, ...additional) => {
+const fruitSalad = (fruit, additional) => {
   // Esreva sua função aqui
-  const getSalad =  ({ ...fruit, ...additional });
-  return getSalad;
-};
+const CompletSalad = [...fruit, ...additional];
+  return CompletSalad;
+}
 
 console.log(fruitSalad(specialFruit, additionalItens));
