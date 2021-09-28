@@ -10,7 +10,8 @@ const additionalItens = ['leite condensado', 'leite em pó', 'sucrilhos'];
 
 const fruitSalad = (fruit, additional) => {
   // Esreva sua função aqui
- 
+  const CompletSalad = [...fruit, ...additional];
+  return CompletSalad;
 }
 
 console.log(fruitSalad(specialFruit, additionalItens));
