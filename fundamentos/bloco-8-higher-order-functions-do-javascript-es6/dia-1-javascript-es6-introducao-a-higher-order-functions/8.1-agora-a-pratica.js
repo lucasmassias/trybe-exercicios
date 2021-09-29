@@ -4,23 +4,21 @@
  A sua função deve receber como parâmetro o nome completo da pessoa funcionária e a partir dele gerar automaticamente um 
  email no formato nome_da_pessoa@trybe.com . */
  console.log('exericio 1');
- const newEmployees = (callback) => {
+ const newEmployees = (createPerson) => {
      const employees = {
-       id1: callback('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-       id2: callback('Luiza Drumond'), // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-       id3: callback('Carla Paiva'), // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+       id1: createPerson('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+       id2: createPerson('Luiza Drumond'), // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+       id3: createPerson('Carla Paiva'), // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
      }
-     return employees;
+     return employees;  
    };
    
     const createPerson = (name) => {
-     return {
-       nomeCompleto: name,
-       email: `${name}@trybe.com`,
-     };
+      const email = name.toLowerCase().split(' ').join('_');
+      return {name, email: `${email}@betrybe.com`}; 
    }
- const employees = newEmployees(createPerson);
- console.log(employees);
+
+ console.log(newEmployees(createPerson));
  console.log('//////////');
  // exercicio 2.
  /* Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo
@@ -31,15 +29,8 @@
    let roundNumber = Math.round(randomNumber);
    console.log(`O número sorteado foi: ${roundNumber}`);
    if (roundNumber === aposta) {
-     return 'Parabéns você ganhou';
-     
-   }
-   else {
-     return 'Tente novamente';
-   }
- 
- }
- 
+     return 'Parabéns você ganhou';}
+   else { return 'Tente novamente';}}
  console.log(sorteio(1));
  console.log('//////////');
  // exercicio 3
@@ -50,23 +41,22 @@
  Quando a resposta for correta a contagem sobe 1 ponto, quando for incorreta desce 0.5 pontos, e quando não houver resposta 
  ("N.A") não altera-se a contagem.*/
  const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
- const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
- let nota = 0;
- 
- const getPoints = (RIGHT_ANSWERS, STUDENT_ANSWERS, callback) => {
-   console.log(callback);
- }
-   let points = (gabarito, respostas) => {
-     for (let count = 0; count <= respostas.lenght; count +=1) {
-     if (gabarito[count] === respostas[count]) {
-       nota = nota + 1;
-     }  
-     if (gabarito[count] !== respostas[count]) {
-       nota = nota - 1;
-     }
-   }
-   return nota;
-   }
- 
-   getPoints(points());
- 
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const repeat = (rightAnswers, studentAnswers, action) => {
+  let contador = 0;
+  for (let index = 0; index < rightAnswers.length; index += 1) {
+    const actionReturn = action(rightAnswers[index], studentAnswers[index]);
+    contador += actionReturn;
+  }
+  return `Resultado final: ${contador} corretas`;
+};
+
+console.log(repeat(RIGHT_ANSWERS, STUDENT_ANSWERS, (rAnswer, uAnswer) => {
+  if (rAnswer === uAnswer) {
+    return 1;
+  } if (uAnswer === 'N.A') {
+    return 0;
+  }
+  return -0.5;
+}));
