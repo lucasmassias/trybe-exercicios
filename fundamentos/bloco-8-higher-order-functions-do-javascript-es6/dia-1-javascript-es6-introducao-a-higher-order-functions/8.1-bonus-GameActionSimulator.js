@@ -35,7 +35,7 @@ const warriorAttack = (warrior) => {
   const { weaponDmg } = warrior;
   const minDmg = warrior.strength;
   const maxDmg = minDmg * weaponDmg;
-  const warriorDamage = Math.floor((Math.random() * (maxDmg - minDmg + 1)) + minDmg);
+  const warriorDamage = Math.floor((Math.random() * (maxDmg + minDmg)) * weaponDmg);
   return warriorDamage;
 };
 // Crie uma função que retorna um objeto com duas chaves e dois valores contendo o dano e a mana gasta pelo mago em um turno.
@@ -52,7 +52,7 @@ const mageAttack = (mage) => {
   };
 
   if (mageMana > 15) {
-    const mageDamage = Math.floor((Math.random() * (maxDmg - minDmg + 1)) + minDmg);
+    const mageDamage = Math.floor((Math.random() * (maxDmg + minDmg)));
     turnStats.manaSpent = 15;
     turnStats.damageDealt = mageDamage;
     return turnStats;
