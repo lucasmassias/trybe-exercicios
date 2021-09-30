@@ -12,5 +12,3 @@ const emailListInData = [
   
   // Adicione seu código aqui
   emailListInData.forEach(showEmailList);
-console.log('/////');
-// 2 - Leia e entenda este exemplo do forEach feito no (-> CodePen <-) (-> https://codepen.io/pen/?template=LYZPEwV->)
