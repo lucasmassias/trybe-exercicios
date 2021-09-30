@@ -62,44 +62,6 @@ const books = [
     releaseYear: 1928,
   },
 ];
-
-// Adicione o código do exercício aqui:
-console.log('/////');
-//1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.(Dica: use a função find )
-function authorBornIn1947() {
-    // escreva aqui o seu código
-  }
-  
-  assert.strictEqual(authorBornIn1947(), 'Stephen King');
-//  2 - Retorne o nome do livro de menor nome. (Dica: use a função forEach .)
-function smallerName() {
-    let nameBook;
-    // escreva aqui o seu código
-  
-    // Variável nameBook que receberá o valor do menor nome;
-    return nameBook;
-  }
-  
-  assert.strictEqual(smallerName(), 'Duna');
-  console.log('/////');
-// 3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
-const expectedResult = {
-    author: {
-      birthYear: 1948,
-      name: 'George R. R. Martin',
-    },
-    genre: 'Fantasia',
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    releaseYear: 1991,
-  };
-  
-  function getNamedBook() {
-    // escreva seu código aqui
-  }
-  
-  assert.deepStrictEqual(getNamedBook(), expectedResult);
-  console.log('/////');
 // 4 - Ordene os livros por data de lançamento em ordem decrescente.
 const expectedResult = [
     {
@@ -148,38 +110,7 @@ const expectedResult = [
   
   function booksOrderedByReleaseYearDesc() {
     // escreva aqui seu código
+    return books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear);
   }
   
   assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
-  console.log('/////');
-// 5 - Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, 
-// ou false , caso contrário.
-const expectedResult = false;
-
-function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
-}
-
-assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
-console.log('/////');
-// 6 - Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , 
-// caso contrário.
-const expectedResult = true;
-
-function someBookWasReleaseOnThe80s() {
-  // escreva seu código aqui
-}
-
-assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
-console.log('/////');
-// 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e 
-// false , caso contrário.
-const expectedResult = false;
-
-function authorUnique() {
-  // escreva seu código aqui
-}
-
-assert.strictEqual(authorUnique(), expectedResult);
-console.log('/////');
-
