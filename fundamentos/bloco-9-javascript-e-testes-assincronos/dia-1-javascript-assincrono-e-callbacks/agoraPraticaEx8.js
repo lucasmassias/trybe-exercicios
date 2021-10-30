@@ -36,7 +36,7 @@ const pokemons = [
   }
   
   getPokemonDetails(
-    (pokemon) => pokemon.name === 'Bulbasaur',
+    (pokemon) => pokemon.name === 'Charmander',
     (error, message) => {
       if (error) {
         console.log(error);
