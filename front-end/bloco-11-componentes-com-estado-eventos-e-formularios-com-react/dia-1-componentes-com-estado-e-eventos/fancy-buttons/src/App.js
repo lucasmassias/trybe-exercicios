@@ -33,18 +33,21 @@ class App extends React.Component {
       numberOfClicks3: lastResult.numberOfClicks3 + 1
     }))
   }
+  getButtonColor(num) {
+    return num % 2 === 0 ? 'green' : 'white';
+  }
 
   render() {
     return (
       <ol>
         <li>
-        <button onClick={ this.eventOfButton }>{ this.state.numberOfClicks1 }</button>
+        <button onClick={ this.eventOfButton } style={{backgroundColor: this.getButtonColor(this.state.numberOfClicks1)}} >{ this.state.numberOfClicks1 }</button>
         </li>
         <li>
-          <button onClick={ this.eventOfOtherButton }>{ this.state.numberOfClicks2 }</button>
+          <button onClick={ this.eventOfOtherButton } style={{backgroundColor: this.getButtonColor(this.state.numberOfClicks2) }} >{ this.state.numberOfClicks2 }</button>
         </li>
         <li>
-          <button onClick={ this.eventOfTheFuckingButton }>{ this.state.numberOfClicks3 }</button>
+          <button onClick={ this.eventOfTheFuckingButton } style={{backgroundColor: this.getButtonColor(this.state.numberOfClicks3)}} >{ this.state.numberOfClicks3 }</button>
         </li>
       </ol>
       );
