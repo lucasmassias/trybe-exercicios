@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 export default class Reacreative extends Component {
   render() {
@@ -15,11 +16,12 @@ export default class Reacreative extends Component {
             name='write'
             onChange={handleChange}
             value={inputWrite}
-          />
+            />
+            { !inputWrite.length ? ' -campo vazio- ' : ' -ok- '}
         </label>
 
         <label>
-
+          Vai comparecer?
           <input
             id='vaiComparecer'
             name="vaiComparecer"
@@ -27,7 +29,6 @@ export default class Reacreative extends Component {
             onChange={handleChange}
             value={inputVaiComparecer}
           />
-          Vai comparecer?
         </label>
 
         <label>
@@ -40,4 +41,10 @@ export default class Reacreative extends Component {
 
     );
   }
+}
+
+Reacreative.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  inputWrite: PropTypes.string.isRequired,
+
 }

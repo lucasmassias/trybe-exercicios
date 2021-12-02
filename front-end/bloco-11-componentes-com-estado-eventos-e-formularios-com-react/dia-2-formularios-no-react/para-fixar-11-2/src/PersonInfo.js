@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 export default class PersonInfo extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class PersonInfo extends Component {
             onChange={handleChange}
             value={inputName}
           />
+          { !inputName.length ? ' -sem resultados- ' : ' -ok- '}
         </label>
 
         <label htmlFor='fState'>
@@ -27,6 +29,7 @@ export default class PersonInfo extends Component {
             value={inputState}
             onChange={handleChange}
           />
+          { !inputState.length ? ' -sem resultados- ' : ' -ok- '}
         </label>
 
         <label htmlFor='email'>
@@ -38,6 +41,8 @@ export default class PersonInfo extends Component {
             onChange={handleChange}
             value={inputEmail}
           />
+          { !inputEmail.match(/^\S+@\S+$/i)
+          ? ' -sem resultados- ' : ' -ok- '}
         </label>
 
         <label htmlFor='age'>
@@ -51,6 +56,7 @@ export default class PersonInfo extends Component {
             <option value="adult">Maior que 18</option>
             <option value="underage">Menor que 18</option>
           </select>
+          { !inputAge.length ? ' -não escolhido ainda- ' : ' -ok- '}
         </label>
 
       </fieldset>
@@ -59,4 +65,11 @@ export default class PersonInfo extends Component {
     );
   }
 }
+
+PersonInfo.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  inputName: PropTypes.string.isRequired,
+  inputEmail: PropTypes.string.isRequired,
+  inputAge: PropTypes.string.isRequired,
+};
 
