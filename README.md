@@ -1,5 +1,5 @@
-# Meu repositório de exercícios da Trybe
+# Repositório de exercícios da Trybe
 
-Aqui ficarão os exercícios do curso de front-end da trybe, que farei da melhor maneira para ficarem tambem como um portfólio.
+Boas-vindas ao repositório de exercícios do meu curso na Trybe! Neste diretório, você encontrará uma coleção de desafios e exercícios que realizei para aprimorar habilidades em programação front-end.
 
-Pratique bastante e não se esqueça de beber água!👊
+Espero que goste! 😉
