@@ -16,15 +16,6 @@ header div {
    margin: auto;
 }
 
-aside {
-   display: flex;
-}
-
-footer {
-   background-color: black;
-   font-size: 75px;
-}
-
 .menu {
    color: white;
    display: flex;
@@ -38,4 +29,86 @@ footer {
 
 .spotify-logo{
    width: 150px;
+}
+
+section {
+   background-color: #171717;
+   color: white;
+}
+
+.sem-limites div {
+   width: 80%;
+   margin: auto;
+   padding: 10px;
+}
+
+.sem-limites p {
+   margin-top: 25px;
+   font-size: 11px;
+   width: 50%;
+}
+
+.sem-limites a {
+   color: white;
+}
+
+.sem-limites div h1 {
+   font-size: 48px;
+   padding-bottom: 10px;
+   width: 60%;
+}
+
+.sem-limites div h2 {
+   font-size: 16px;
+   padding-bottom: 10px;
+}
+
+#btn-1mesgratis {
+   background-color: #ffd2d7;
+   padding: 10px 25px;
+   border-radius: 25px;
+   font-size: 16px;
+   font-weight: 700;
+   border: 1px solid black;
+}
+
+#btn-planos{
+   color: white;
+   background-color: black;
+   padding: 10px 25px;
+   border-radius: 25px;
+   font-size: 16px;
+   font-weight: 700;
+   border: 1px solid white;
+}
+
+aside {
+   display: flex;
+}
+
+footer {
+   background-color: black;
+   font-size: 75px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside {
+   display: flex;
+}
+
+footer {
+   background-color: black;
+   font-size: 75px;
 }
