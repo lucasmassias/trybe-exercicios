@@ -43,7 +43,7 @@ section {
 }
 
 .sem-limites p {
-   margin-top: 25px;
+   margin-top: 20px;
    font-size: 11px;
    width: 50%;
 }
@@ -92,23 +92,26 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-aside {
-   display: flex;
+.container-compare {
+   display: block;
+   margin: auto;
+   width: 33%;
 }
 
-footer {
-   background-color: black;
-   font-size: 75px;
+.tabela {
+   display: flex;
+   margin: auto;
+}
+
+.tabela ul {
+   list-style: none;
+   margin-left: 25px;
+}
+
+.container-compare h1 {
+   font-size: 40px;
+}
+
+.container-compare h2 {
+   font-size: 24px;
 }
